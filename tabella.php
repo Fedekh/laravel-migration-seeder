@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('company_name', 100);
             $table->string('station_start', 100);
             $table->string('station_end', 100);
-            $table->date('time_start');
-            $table->date('time_end');
+            $table->dateTime('time_start');
+            $table->dateTime('time_end');
             $table->string('train_code')->NOTNULLABLE();
             $table->smallInteger('number_carriages')->unsigned()->NOTNULLABLE();
             $table->boolean('in_time')->NOTNULLABLE();

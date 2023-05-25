@@ -9,3 +9,11 @@ class Train extends Model
 {
     use HasFactory;
 }
+
+// {
+//     public function index()
+//     {
+//         $trains = Train::all();
+//         return view('home', compact('trains'));
+//     }
+// }
