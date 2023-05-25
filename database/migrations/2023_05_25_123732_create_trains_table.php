@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('company_name', 100);
             $table->string('station_start', 100);
             $table->string('station_end', 100);
-            $table->tinyInteger('time_start', 10)->unsigned();
-            $table->tinyInteger('time_end', 10)->unsigned();
-            $table->string('train_code');
-            $table->smallint('number_carriages')->unsigned();
-            $table->boolean('in_time');
-            $table->boolean('delayed');
+            $table->date('time_start');
+            $table->date('time_end');
+            $table->string('train_code')->NOTNULLABLE();
+            $table->smallInteger('number_carriages')->unsigned()->NOTNULLABLE();
+            $table->boolean('in_time')->NOTNULLABLE();
+            $table->boolean('delayed')->NOTNULLABLE();
             $table->timestamps();
         });
     }

@@ -16,18 +16,18 @@ class Train_Table_Seeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        foreach($trains as $train){
-            $newTrain=new Train();
+        for ($i = 0; $i < 30; $i++) {
+            $train = new Train();
             //popolo i campi
-            $train->company_name=$faker->name();
-            $train->station_start=$faker->text();
-            $train->station_end=$faker->text();
-            $train->time_start=$faker->date();
-            $train->time_end=$faker->date();
-            $train->train_code=$faker->bothify('??-#########');
-            $train->number_carriages=$faker->numberBetween(10,200);
-            $train->in_time= $faker->randomElement([true, false]);
-            $train->delayed= $faker->randomElement([true, false]);
+            $train->company_name = $faker->name();
+            $train->station_start = $faker->text(100);
+            $train->station_end = $faker->text(100);
+            $train->time_start = $faker->date();
+            $train->time_end = $faker->date();
+            $train->train_code = $faker->bothify('??-#####');
+            $train->number_carriages = $faker->numberBetween(10, 300);
+            $train->in_time = $faker->randomElement([true, false]);
+            $train->delayed = $faker->randomElement([true, false]);
             $train->save();
         }
     }

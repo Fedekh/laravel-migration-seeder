@@ -128,3 +128,9 @@ public function run(Faker $faker)
 
 //il seeder ora si esegue con il comando:
 php artisan db:seed --class=NomeSeeder
+
+
+
+1)  php artisan make:migration create_trains_table   
+2)php artisan migrate                 
+3) php artisan make:seeder Train_Table_Seeder       
