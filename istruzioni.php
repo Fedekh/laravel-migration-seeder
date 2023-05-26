@@ -131,7 +131,14 @@ php artisan db:seed --class=NomeSeeder
 
 
 
-1)  php artisan make:migration create_trains_table   
-2)php artisan migrate     
-3) php artisan make:seeder Train_Table_Seeder       
-4)php artisan db:seed --class=Train_Table_Seeder            
+1)  php artisan make:migration create_trains_table   //crea la tabella
+2)  php artisan migrate                                 //la carica nel database
+3)  php artisan make:seeder Train_Table_Seeder          //crea il seeder
+4)  php artisan db:seed --class=Train_Table_Seeder          //carica i dati manipolandoli con i faker nella tabella del database
+5)  php artisan migrate:refresh                        //cancella tutto e ricrea tutto da capo ma senza i dati, da non fare mai in produzione
+
+6)  php artisan make:migration add_price_to_trains_table  //aggiunge la colonna alla tabella
+php artisan migrate   
+php artisan db:seed --class=Train_Table_Seeder
+7)  php artisan migrate                                 //la carica nel database    
+8)  php artisan migrate:rollback                        //cancella l'ultima migrazione

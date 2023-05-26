@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-    background-color: #b1b2b3;
+    background-color: #2e2e2e;
     color: #0097b5;
 
 
@@ -13,7 +13,7 @@ body {
 
     }
 
-    .custom-table {
+    .table {
         width: 100%;
         margin: 50px 0;
         border-collapse: collapse;
@@ -21,7 +21,7 @@ body {
         th {
             background-color: #00aa78;
             vertical-align: middle;
-            color: #f800a5;
+            color: #e70b0b;
             padding: 10px;
             font-weight: bold;
             text-align: center;
@@ -33,9 +33,9 @@ body {
         }
         
         tbody {
-
             tr{
-            color: #0097b5;
+            color: #97969c;
+            // font-weight: bold;
             }
             tr:last-child {
                 td {
